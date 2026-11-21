@@ -43,7 +43,11 @@ export default function HomePage() {
       )
   )
 
-  const firstName = 'Muhammad Nadeem'
+  const welcomeMessage = !isLoaded
+    ? 'Loading your workspace...'
+    : isSignedIn
+      ? 'Welcome back!'
+      : 'Welcome to CareerForge!'
 
   return (
     <div
@@ -74,14 +78,14 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <div className="hidden text-right sm:block">
               <p className="text-sm font-bold text-[#25213A]">
-                {isSignedIn ? firstName : 'Your account'}
+                {isLoaded && isSignedIn ? 'Your account' : 'Guest'}
               </p>
               <p className="text-[11px] text-[#8B849B]">
                 Career workspace
               </p>
             </div>
             <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#E9E2F8] bg-gradient-to-br from-[#F0EAFE] to-[#E5D9FA] text-sm font-extrabold text-[#6046A5] shadow-sm">
-              M
+              {isLoaded && isSignedIn ? 'M' : <Sparkles size={18} />}
             </div>
           </div>
         </div>
@@ -95,7 +99,7 @@ export default function HomePage() {
           </p>
 
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
-            Welcome back, {firstName}!
+            {welcomeMessage}
           </h2>
 
           <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-500 md:text-base">
