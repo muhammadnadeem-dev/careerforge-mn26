@@ -1,0 +1,25 @@
+node_modules
+dist
+.wrangler
+.wrangler.deepspace.*.toml
+.dev.vars
+.dev.vars.*
+.deepspace
+.worker-bundle.js
+*.tgz
+test-results/
+playwright-report/
+src/router.ts
+src/modals.tsx
+.claude/launch.json
+.claude/worktrees
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Private keys and certificates
+*.pem
+*.key

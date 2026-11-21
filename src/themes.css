@@ -1,0 +1,46 @@
+/*
+ * Theme overrides — applied via <html data-theme="<id>">.
+ *
+ * Default values live in `styles.css` (@theme block, slate — a neutral
+ * placeholder, not a design choice). Every app should define its OWN theme
+ * before first deploy: copy the example block below, rename the selector,
+ * and set colors that fit the product. Shape comes from `--radius`.
+ *
+ * To add a theme:
+ *   1. Add a `[data-theme="my-id"] { ... }` block overriding the shadcn
+ *      tokens below. If the theme is light, include `color-scheme: light;`
+ *      so native form controls (calendar icons, scrollbars) match.
+ *   2. Add an entry to `src/themes.ts` so it shows up in the typed catalog.
+ *   3. Add the theme's --color-background to the first-paint <style> block
+ *      in index.html so the pre-CSS frame matches (no white flash).
+ *   4. Switch to it via `data-theme` on <html> in index.html.
+ */
+
+/* Paper — light example theme; shows the full token contract incl.
+ * `color-scheme: light`. Replace or delete it once the app has its own. */
+[data-theme="careerforge"] {
+  color-scheme: light;
+  --color-background: #F8F7FC;
+  --color-foreground: #25213A;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #25213A;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #25213A;
+  --color-primary: #6046A5;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #F0EBFA;
+  --color-secondary-foreground: #49356B;
+  --color-muted: #F1EEF7;
+  --color-muted-foreground: #6B6578;
+  --color-accent: #EAE3F7;
+  --color-accent-foreground: #49356B;
+  --color-destructive: #DC2626;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #EAE7F2;
+  --color-input: #EAE7F2;
+  --color-ring: #6046A5;
+  --shadow-card: 0 1px 3px rgba(37, 33, 58, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(37, 33, 58, 0.10);
+  --color-shell: #F8F7FC;
+  --color-shell-panel: #FFFFFF;
+}
